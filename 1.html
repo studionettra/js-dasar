@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="pesan">
+
+    </p>
+
+    <script>
+        // Variable = penampung nilai
+        //      const = nilainya tetap
+        //     var = nilainya bisa di ubah
+        //     let = nilainya bisa di ubah
+
+        const nama_depan = "Doni"
+        const nama_belakang = "Siregar"
+
+        console.log(nama_belakang)
+        console.log(`Nama Saya adalah ${nama_depan} ${nama_belakang}`);
+
+        let nama = "Rudi"
+        let alamat = "Depok"
+        let pesan = `Halo nama saya ${nama}, saat ini tinggal di ${alamat}`;
+        let angka1 = 1;
+        let angka2 = 2;
+        let angka3 = 6;
+        let angka5 = 4;
+        let angka6 = 7;
+        let angka7 = 8;
+
+        document.getElementById("pesan").innerHTML = pesan;
+
+        console.log(`Hasilnya adalah : ${angka1} + ${angka2} =`, (angka1 + angka2))
+        console.log(`Hasilnya adalah : ${angka1} - ${angka2} =`, (angka1 - angka2))
+        console.log(`Hasilnya adalah : ${angka1} * ${angka2} =`, (angka1 * angka2))
+        console.log(`Hasilnya adalah : ${angka1} / ${angka2} =`, (angka1 / angka2))
+
+        console.log(`Hasilnya adalah : ${angka3} % ${angka5} =`, (angka3 % angka5)) //Modulus = sisa pembagian
+
+    // document.write(pesan);
+
+    </script>
+</body>
+
+</html>

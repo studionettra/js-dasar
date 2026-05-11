@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+
+    <form action="" method="post" onsubmit="return false;">
+        <label for="">Nama</label><br>
+        <input type="text" id="nama"><br>
+        <label for="">Nilai Teori</label><br>
+        <input type="number" id="teori"><br>
+        <label for="">Nilai Praktek</label><br>
+        <input type="number" id="praktek"><br>
+        <label for="">Kehadiran</label><br>
+        <input type="number" id="kehadiran"><br>
+        <label for="">Pelanggaran Berat</label><br>
+        <select name="" id="pelanggaran">
+            <option value="">Pilih</option>
+            <option value="">Ada</option>
+            <option value="">Tida</option>
+        </select><br><br>   
+        <button onclick="passinggrade()">Cek Status Kelulusan</button>
+    </form>
+
+    <input type="text" id="hasil">
+
+    <script>
+
+        function passinggrade() {
+
+            let teori = parseFloat(document.getElementById("teori").value);
+            let praktek = parseFloat(document.getElementById("praktek").value);
+            let kehadiran = parseInt(document.getElementById("kehadiran").value);
+            let pelanggaran = document.getElementById("pelanggaran").value;   
+            let rataRata = (teori + praktek)/2         
+            let hasil = 0;
+
+            
+
+
+            if (rataRata > 90) {
+                                            
+            } else {
+                
+            }
+
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

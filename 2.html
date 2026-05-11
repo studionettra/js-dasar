@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form action="" method="post" onsubmit="return false;">
+      <label for="">Masukan Nama Kota</label>
+      <input type="text" id="kota" />
+      <button onclick="jasaPengiriman()">Tes</button>
+    </form>
+
+    <p id="hasil"></p>
+
+    <script>
+      function jasaPengiriman() {
+        let kota = document.querySelector("#kota").value;
+        let berat = 10;
+        let tarif = 0;
+
+        if (kota === "Bogor") {
+          tarif = 2000;
+        } else if (kota === "Depok") {
+          tarif = 4000;
+        } else {
+          tarif = 6000;
+        }
+
+        const total = `Total = ${berat * tarif}`;
+        document.querySelector("#hasil").innerHTML = total;
+      }
+
+      // let kota = "Jakarta";
+      // let berat = 10;
+      // let tarif = 0;
+
+      // console.log(5 == 5); //true
+      // console.log(5 === "5") //false
+
+      // if (kota === "Bogor") {
+      //     tarif = 2000;
+      // } else if (kota ==== "Depok") {
+      //     tarif = 3000;
+      // } else {
+      // tarif = 6000;
+      // }
+
+      // const total_harga = berat * tarif
+      // console.log(tarif)
+    </script>
+  </body>
+</html>
