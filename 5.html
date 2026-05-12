@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+
+<!-- DOM : Document Object Modeling
+    Seperti pohon keluarga
+    DOM seperti jembatan yang menghubungkan antar HTML ke dalam javascript
+
+    bisa merubah koten dalam tag html 
+
+    <p>test</p> menjadi <p>PPKD</p>
+-->
+
+
+<h1 id="heading1" class="heading1">Selamat Datang</h1>
+<h1 id="heading1" class="heading1">Selamat Datang</h1>
+
+
+
+
+
+
+
+
+<Script>
+
+let heading = document.querySelector('h1');
+let heading1Class = document.querySelector(".heading1"); //pakek Class
+let heading1Id = document.querySelector("#heading1"); // pakek id
+let heading1IdNew = document.getElementById('heading1'); //pakek id
+
+console.log(heading.innerHTML);
+
+heading.innerHTML = "Belajar Javascript"
+heading1Id.innerHTML = "Saya Sudah Jago"
+
+
+
+
+
+
+
+</Script>
+
+
+<body>
+    
+</body>
+</html>
