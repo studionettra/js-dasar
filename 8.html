@@ -140,6 +140,12 @@
         btnTambah.addEventListener('click', function(){
             //push(): memasukan data ke dalam array
 
+            if(inputNama.value === ""){
+                alert("Isi dulu namanya ya!");
+                return;
+            }     
+
+
             daftarPeserta.push({
                 nama: inputNama.value,
                 jenisKelamin: "",
@@ -151,7 +157,7 @@
             getDataPeserta();
 
             inputNama.value= "";
-
+            
         });
 
 

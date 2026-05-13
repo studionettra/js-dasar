@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="post" onsubmit="return false;">
+      <label>Angka 1</label>
+      <input type="number" id="angkal" /><br />
+      <label>Angka 2</label>
+      <input type="number" id="angka2" /><br />
+      <button onclick="penjumlahan()">Jumlahkan</button>
+      <input type="number" id="hasil" />
+      <h3 id="hasil2"></h3>
+    </form>
+
+    <script>
+      function penjumlahan() {
+      let angkal = parseFloat(document.getElementById("angkal").value);
+      let angka2 = parseFloat(document.getElementById("angka2").value);
+      let hasil = 0;
+      
+      hasil = angka1 + angka2;
+
+      document.getElementById("hasil").value = hasil;
+      document.getElementById("hasil2").innerHTML = hasil;
+      }
+    </script>
+  </body>
+</html>
