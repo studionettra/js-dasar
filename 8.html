@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- 
+    Array di Javascript 
+    adalah sebuah tipe data yang bisa menampung banyak nilai
+    ada 2 macam :
+    1. Satu Dimensi
+    2. Multi Dimensi
+    -->
+
+
+    <div class="mb-3">
+
+        <label for="">Nama</label>
+        <input type="text" id="input-nama" placeholder="Masukan Nama...">
+
+    </div>
+
+    <button id="btn-tambah">Tambah Data</button>
+  <P></P>
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Jenis Kelamin</th>
+                <th>Umur</th>
+                <th>Alamat</th>
+                <th>Aksi</th>
+            </tr>
+        <tbody id="tabel-peserta"></tbody>
+        </thead>
+    </table>
+
+    <script>
+
+        // dibawah ini adalah array yang berisi kumpulan string
+        let daftarBuah = ["Apel", "Nanas", "Jeruk"];
+
+        // dibawah ini adalah array yang berisi kumpulan integer
+        let daftarHarga = [10000, 20000, 30000]
+
+        let mixHargaBuah = ["Nanas", 10000, "Semangka", 20000];
+
+
+        console.log(daftarBuah[1]); //memanggil Nanas
+
+        console.log(daftarHarga[1]); //memanggil 30000
+
+        // console.log(mixHargaBuah ${"Saya Membeli Sebuah"} " " [0] " " ${"Seharga"} " " [1]);
+
+
+        // array multi dimensi (ada array di dalam array)
+
+        let peserta = [
+            [
+                "Reza",
+                "10",
+                "Bekasi",
+                "Pria"
+
+            ],
+            [
+                "Firman",
+                "15",
+                "Bogor",
+                "Pria"
+
+            ]
+        ]
+
+        console.log(peserta);
+
+        console.log(peserta[0][0]);
+
+
+        let daftarPeserta = [
+            {
+                nama: "Budi Saudarsono",
+                umur: "10",
+                alamat: "Cakung",
+                jenisKelamin: "Pria"
+            },
+            {
+                nama: "Marlina",
+                umur: "11",
+                alamat: "Kreo",
+                jenisKelamin: "Wanita"
+            },
+            {
+                nama: "Hardi",
+                umur: "13",
+                alamat: "Kemang",
+                jenisKelamin: "Pria"
+            },
+        ]
+
+        console.log(daftarPeserta)
+        console.log(daftarPeserta[0].nama);
+        console.log(daftarPeserta[1].nama);
+        console.log(daftarPeserta[2].nama);
+
+
+
+        const tbodyPeserta = document.getElementById("tabel-peserta")
+
+        function getDataPeserta() {
+            tbodyPeserta.innerHTML = "";
+
+            for (let i = 0; i < daftarPeserta.length; i++) {
+                let barisBaru = document.createElement('tr');
+                barisBaru.innerHTML =
+                    `<td>${daftarPeserta[i].nama}</td>
+                <td>${daftarPeserta[i].jenisKelamin}</td>
+                <td>${daftarPeserta[i].umur}</td>
+                <td>${daftarPeserta[i].alamat}</td>
+                <td><button class = 'btn-hapus' data-index="${i}"">Hapus</button></td>`
+
+                tbodyPeserta.appendChild(barisBaru);
+            }
+
+        }
+
+        getDataPeserta();
+
+
+        const btnTambah = document.getElementById('btn-tambah')
+        const inputNama = document.getElementById('input-nama');
+
+        btnTambah.addEventListener('click', function(){
+            //push(): memasukan data ke dalam array
+
+            daftarPeserta.push({
+                nama: inputNama.value,
+                jenisKelamin: "",
+                umur: "",
+                alamat: "",
+        
+            })
+
+            getDataPeserta();
+
+            inputNama.value= "";
+
+        });
+
+
+
+
+        tbodyPeserta.addEventListener('click', function (event) {
+            if (event.target.classList.contains('btn-hapus')) {
+                let indexData = event.target.getAttribute('data-index');
+
+                daftarPeserta.splice(indexData, 1);
+
+
+                //event.target.parentElement.parentElement.remove()
+                getDataPeserta();
+
+            }
+
+        });
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
